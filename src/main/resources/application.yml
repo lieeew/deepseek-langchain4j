@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: deepseek-langchain
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${DEEPSEEK_API_KEY}
+      base-url: https://api.deepseek.com
+      model-name: deepseek-v4-pro
+      return-thinking: true
+      reasoning-effort: high
+      log-requests: true
+      custom-parameters:
+        thinking:
+          type: enabled
+
+server:
+  port: 8080
